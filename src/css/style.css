@@ -28,8 +28,8 @@
 
 body{
     background-color: var(--colorFundo);
-    margin: 0 10px 0 10px;
     display: grid;
+    height: 100vh;
 }
 
 header{
@@ -135,7 +135,6 @@ main{
     display: flex;
     justify-content: center;
  
-    height: 100vh;
 }
 
 form{
@@ -178,4 +177,14 @@ nav>fieldset>input,a{
 }
 
 
+}
+
+@media (max-width: 405px){
+    form{
+        max-width: 100%;
+    }
+
+    section{
+        margin: 0 20px;
+    }
 }

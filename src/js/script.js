@@ -16,6 +16,6 @@ function lerDados() {
     return false;
 }
 
-function esquecer(){
+function esqueceu(){
     return false;
 }

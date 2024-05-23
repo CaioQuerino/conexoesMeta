@@ -17,5 +17,5 @@ function lerDados() {
 }
 
 function esquecer(){
-    
+    return false;
 }

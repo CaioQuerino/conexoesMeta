@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Advent pro";
+    src: url(../font/Advent_Pro/AdventPro-VariableFont_wdth\,wght.ttf);
+    
+    font-weight: 500;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Advent pro";
+    color: var(--colorFont);
+    text-decoration: none;
+}
+
+:root{
+    --colorFont: hsl(0, 0%, 100%);
+    --colorFundo: hsl(0, 0%, 0%);
+
+}
+
+body{
+    background-color: var(--colorFundo);
+    margin: 0 10px 0 10px;
+    display: grid;
+}
+
+h1, h2, p{
+    color: var(--colorFont);
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/img/Head-Wolf-Logo-Design-Inspiration-Graphics-39255511-1-1-580x387.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/script.js"></script>
+    <title>Conexões Meta</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <picture>
+                <a href="./index.html"><img src="src/img/Head-Wolf-Logo-Design-Inspiration-Graphics-39255511-1-1-580x387.jpg" alt="Logo"></a>
+            </picture>
+            <fieldset>
+                <input type="email" placeholder="E-mail ou telefone" required autocomplete="off" autofocus>
+                <input type="password" placeholder="Senha" required maxlength="9" autocomplete="off">
+                <input type="submit" value="Entrar">
+                <a href="./esqueceu_senha.html">Esqueceu a senha?</a>
+            </fieldset>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <form method="post" onsubmit="return lerDados()">
+                <fieldset>
+                    <label for="nome">Nome completo</label>
+                    <input type="text" required name="nome" id="idNome" autocomplete="off">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="usuario">Nome de usuário</label>
+                    <input type="text" required name="usuario" id="idUsuario" autocomplete="off">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="email">E-mail</label>
+                    <input type="email" class="noInput" required name="email" id="idEmail" autocomplete="off">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="celular">Celular</label>
+                    <input type="tel" required name="celular" id="idCelular" pattern="\d{2} \d{5}-\d{4}" maxlength="13" autocomplete="off">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="senha">Senha</label>
+                    <input type="password" class="noInput" name="senha" id="idSenha" required maxlength="9" autocomplete="off">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="confirme_senha">Confirme a senha</label>
+                    <input type="password" class="noInput" name="confirme_senha" id="idConfirmeSenha" required maxlength="9" autocomplete="off">
+                </fieldset>
+
+                <fieldset>
+                    <a href="termos_de_uso.html" target="_blank">Termos de uso</a>
+                    <input type="checkbox" name="checkbox" id="idCheckBox" required><label for="checkbox"> Li e aceito os termos de uso</label>
+                </fieldset>
+                
+                <fieldset class="Cadastrar">
+                    <input type="submit" value="Cadastrar">
+                </fieldset>
+            </form>
+
+            <table border="1px">
+                <tr>
+                    <td>Nome Completo: </td>
+                    <td id="nome"></td>
+                </tr>
+
+                <tr>
+                    <td>Nome de usuário: </td>
+                    <td id="username"></td>
+                </tr>
+
+                <tr>
+                    <td>E-mail: </td>
+                    <td id="email"></td>
+                </tr>
+
+                <tr>
+                    <td>Celular: </td>
+                    <td id="tel"></td>
+                </tr>
+
+                <tr>
+                    <td>Senha: </td>
+                    <td id="password"></td>
+                </tr>
+
+                <tr>
+                    <td>Confirma senha: </td>
+                    <td id="confirmpassword"></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Conexões Meta. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

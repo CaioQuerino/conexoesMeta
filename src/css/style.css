@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Advent pro";
+    src: url(../font/Advent_Pro/AdventPro-VariableFont_wdth\,wght.ttf);
+    
+    font-weight: 500;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Advent pro";
+    color: var(--colorFont);
+    text-decoration: none;
+}
+
+:root{
+    --colorFont: hsla(0, 0%, 100%, 0.502);
+    --colorHover: hsl(32, 99%, 49%);
+    --colorFundo: hsl(0, 0%, 0%);
+    --colorButton: hsl(0, 0%, 31%);
+    --colorForm: hsla(0, 2%, 21%, 0.302);
+    --colorcarta: hsl(238, 75%, 6%);
+    --colorFundoInputs: hsl(0, 0%, 4%);
+}
+
+body{
+    background-color: var(--colorFundo);
+    margin: 0 10px 0 10px;
+    display: grid;
+}
+
+header{
+    display: grid;
+    width: 100%;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+nav>fieldset>input,a{
+    margin-left: 18px;
+}
+
+form{
+    display: grid;
+    justify-content: center;
+    background-color: var(--colorForm);
+    padding: 36px;
+}
+
+fieldset{
+    border: none;
+}
+
+input[type=email],
+input[type=password],
+input[type=text],
+input[type=tel]{
+    background-color: var(--colorFundoInputs);
+    border: none;
+    border-radius: 5px;
+    width: 302px;
+    height: 40px;
+    font: normal 800 18px "Advent pro";
+    text-align: center;
+    margin: 5px;
+    margin-bottom: 5px;
+}
+
+input[type=email]:hover,
+input[type=password]:hover,
+input[type=submit]:hover,
+input[type=text]:hover,
+input[type=tel]:hover{
+    border: 1px solid var(--colorHover);
+    transition: .3s ease-in;
+
+
+}
+
+input[type=submit]{
+    width: 97px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: var(--colorButton);
+    font: normal 800 18px "Advent pro";
+    color: var(--colorFont);
+    margin-top: 10px;
+    border: none;
+}
+
+input[type=submit]:hover{
+    color: var(--colorHover);
+    cursor: pointer;
+    transition: .3s ease-in;
+
+
+}
+
+.Recuperar_senha{
+    display: flex;
+    justify-content: center;
+}
+
+.Recuperar_senha>input[type=submit]{
+    width: 50%;
+}
+
+form>fieldset>.cadastrar{
+    display: flex;
+    justify-content: center;
+}
+
+
+a:hover{
+    color: var(--colorHover);
+}
+
+::placeholder{
+    color: var(--colorFont);
+    text-align: center;
+    font-size: 18px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+ 
+    height: 100vh;
+}
+
+form{
+    max-width: 795px;
+    display: grid;
+    margin-top: 50px;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px hsla(0, 0%, 45%, 0.336);
+}
+
+picture{
+    display: flex;
+    align-items: center;
+}
+
+picture>a>img{
+    max-width: 50px;
+    border-radius: 500px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+@media (max-width: 952px){
+    nav{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+nav>fieldset>input,a{
+    margin-left: 18px;
+    margin-bottom: 40px;
+}
+
+
+}

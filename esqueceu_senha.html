@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/img/Head-Wolf-Logo-Design-Inspiration-Graphics-39255511-1-1-580x387.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/script.js"></script>
+    <title>Conexões Meta</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <picture>
+                <a href="./index.html"><img src="src/img/Head-Wolf-Logo-Design-Inspiration-Graphics-39255511-1-1-580x387.jpg" alt="Logo"></a>
+            </picture>
+            <fieldset>
+                <input type="email" placeholder="E-mail ou telefone" required autocomplete="off">
+                <input type="password" placeholder="Senha" required maxlength="9" autocomplete="off">
+                <input type="submit" value="Entrar">
+                <a href="esqueceu_senha.html">Esqueceu a senha?</a>
+            </fieldset>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <form method="post" onsubmit="return esqueceu()">
+                <fieldset>
+                    <label for="email">E-mail</label>
+                    <input type="email" class="noInput"  name="email" id="idEmail" autocomplete="off" autofocus>
+                </fieldset>
+<fieldset>
+                    <label for="celular">Celular</label>
+                    <input type="tel"  name="celular" id="idCelular" pattern="\d{2} \d{5}-\d{4}" maxlength="13" autocomplete="off">
+                </fieldset>
+
+                <fieldset class="Recuperar_senha">
+                    <input type="submit" value="Recuperar senha">
+                </fieldset>
+
+            </form>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Conexões Meta. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

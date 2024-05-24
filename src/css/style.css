@@ -62,6 +62,8 @@ form{
     padding: 36px;
 }
 
+
+
 fieldset{
     border: none;
 }
@@ -140,6 +142,8 @@ main{
     display: flex;
     justify-content: center;
     height: 100vh;
+    overflow: hidden;
+    overflow: scroll;
 }
 
 form{
@@ -149,6 +153,7 @@ form{
     align-items: center;
     border-radius: 5px;
     box-shadow: 0 2px 4px hsla(0, 0%, 45%, 0.336);
+    
 }
 
 picture{

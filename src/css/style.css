@@ -196,8 +196,6 @@ main{
     justify-content: center;
     height: 100vh;
     margin: 0 10px;
-    overflow: hidden;
-    overflow: scroll;
 }
 
 nav>fieldset>input,a{

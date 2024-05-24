@@ -143,8 +143,6 @@ main{
     justify-content: center;
     height: 100vh;
     margin: 0 10px;
-    overflow: hidden;
-    overflow: scroll;
 }
 
 form{
@@ -191,6 +189,15 @@ footer {
     display: flex;
     justify-content: center;
     text-align: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 10px;
+    overflow: hidden;
+    overflow: scroll;
 }
 
 nav>fieldset>input,a{

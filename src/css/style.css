@@ -142,12 +142,13 @@ main{
     display: flex;
     justify-content: center;
     height: 100vh;
+    margin: 0 10px;
     overflow: hidden;
     overflow: scroll;
 }
 
 form{
-    max-width: auto;
+    max-width: 795px;
     display: grid;
     margin-top: 50px;
     align-items: center;

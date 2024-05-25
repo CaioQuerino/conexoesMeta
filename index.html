@@ -17,7 +17,7 @@
             <fieldset>
                 <input type="email" placeholder="E-mail ou telefone" required autocomplete="off" autofocus>
                 <input type="password" placeholder="Senha" required maxlength="9" autocomplete="off">
-                <input type="submit" value="Entrar">
+                <button type="submit">Entrar</button>
                 <a href="./esqueceu_senha.html">Esqueceu?</a>
             </fieldset>
         </nav>
@@ -64,9 +64,36 @@
                 </fieldset>
                 
                 <fieldset class="cadastrar">
-                    <input type="submit" value="Cadastrar">
+                    <button type="submit">Cadastrar</button>
                 </fieldset>
             </form>
+
+            <table border="1px">
+                <tr>
+                    <td>Nome Completo</td>
+                    <td id="nome"></td>
+                </tr>
+                <tr>
+                    <td>Nome de usuário</td>
+                    <td id="username"></td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td id="email"></td>
+                </tr>
+                <tr>
+                    <td>Celular</td>
+                    <td id="tel"></td>
+                </tr>
+                <tr>
+                    <td>Senha</td>
+                    <td id="password"></td>
+                </tr>
+                <tr>
+                    <td>Confirmação de senha</td>
+                    <td id="confirmpassword"></td>
+                </tr>
+            </table>
 
         </section>
     </main>

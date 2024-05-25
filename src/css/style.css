@@ -50,6 +50,11 @@ nav>fieldset, nav>fieldset>input{
     margin: 0 10px;
 }
 
+nav>fieldset{
+    display: flex;
+    align-items: center;
+}
+
 nav>fieldset>a{
     margin-left: 18px;
 }
@@ -71,7 +76,8 @@ fieldset{
 input[type=email],
 input[type=password],
 input[type=text],
-input[type=tel]{
+input[type=tel],
+button{
     background-color: var(--colorFundoInputs);
     border: none;
     border-radius: 5px;
@@ -84,7 +90,7 @@ input[type=tel]{
 
 input[type=email]:hover,
 input[type=password]:hover,
-input[type=submit]:hover,
+button:hover,
 input[type=text]:hover,
 input[type=tel]:hover{
     border: 1px solid var(--colorHover);
@@ -93,7 +99,7 @@ input[type=tel]:hover{
 
 }
 
-input[type=submit]{
+button{
     width: 97px;
     height: 40px;
     font-size: 18px;
@@ -101,30 +107,31 @@ input[type=submit]{
     background-color: var(--colorButton);
     font: normal 800 18px "Advent pro";
     color: var(--colorFont);
-    margin-top: 10px;
     border: none;
 }
 
-input[type=submit]:hover{
+button:hover{
     color: var(--colorHover);
     cursor: pointer;
     transition: .3s ease-in;
-
-
 }
+
+
 
 .Recuperar_senha{
     display: flex;
     justify-content: center;
 }
 
-.Recuperar_senha>input[type=submit]{
+.Recuperar_senha>button{
     width: 50%;
+    margin-top: 20px;
 }
 
-form>fieldset>.cadastrar{
+form>.cadastrar{
     display: flex;
     justify-content: center;
+    margin: 20px;
 }
 
 
@@ -152,7 +159,6 @@ form{
     align-items: center;
     border-radius: 5px;
     box-shadow: 0 2px 4px hsla(0, 0%, 45%, 0.336);
-    
 }
 
 picture{
@@ -200,7 +206,6 @@ main{
 
 nav>fieldset>input,a{
     margin-left: 18px;
-    margin-bottom: 40px;
 }
 }
 

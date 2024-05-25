@@ -35,8 +35,6 @@ body{
 
 header{
     display: grid;
-    width: 100%;
-
 }
 
 nav{
@@ -53,6 +51,8 @@ nav>fieldset, nav>fieldset>input{
 nav>fieldset{
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav>fieldset>a{

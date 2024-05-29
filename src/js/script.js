@@ -42,6 +42,15 @@ function fazerLogin() {
   }
 }
 
+function fazerLogout() {
+  // Remover os dados de login armazenados localmente
+  localStorage.removeItem("email");
+  localStorage.removeItem("password");
+  window.location.href = "/index.html";
+  alert("Logout bem-sucedido!");
+  // Redirecionar para a página de login ou fazer outra ação desejada
+}
+
 function esqueceu() {
   return false;
 }
@@ -63,3 +72,4 @@ const phoneMask = (value) => {
   value = value.replace(/(\d)(\d{4})$/, "$1-$2");
   return value;
 };
+

@@ -15,7 +15,7 @@
                 <a href="./index.html"><img src="src/img/logo2.png" alt="Logo"></a>
             </picture>
             <fieldset>
-                <input type="email" id="emailTelefone" placeholder="E-mail ou telefone" required autocomplete="onon" autofocus>
+                <input type="email" id="emailTelefone" placeholder="E-mail ou telefone" required autocomplete="off" autofocus>
                 <input type="password" id="senhaLogin" placeholder="Senha" required maxlength="9" autocomplete="off">
                 <button type="submit" onclick="fazerLogin(); return false;">Entrar</button>
                 <a href="./esqueceu_senha.html">Esqueceu?</a>
@@ -28,22 +28,22 @@
             <form onsubmit="lerDados(); return false;">
                 <fieldset>
                     <label for="idNome">Nome completo</label>
-                    <input type="text" required name="nome" id="idNome" autocomplete="on">
+                    <input type="text" required name="nome" id="idNome" autocomplete="off">
                 </fieldset>
                 
                 <fieldset>
                     <label for="idUsuario">Nome de usuário</label>
-                    <input type="text" required name="usuario" id="idUsuario" autocomplete="on">
+                    <input type="text" required name="usuario" id="idUsuario" autocomplete="off">
                 </fieldset>
                 
                 <fieldset>
                     <label for="idEmail">E-mail</label>
-                    <input type="email" class="noInput" required name="email" id="idEmail" autocomplete="on">
+                    <input type="email" class="noInput" required name="email" id="idEmail" autocomplete="off">
                 </fieldset>
                 
                 <fieldset>
                     <label for="idCelular">Celular</label>
-                    <input type="tel" required name="celular" id="idCelular" maxlength="15" autocomplete="on">
+                    <input type="tel" required name="celular" id="idCelular" maxlength="15" autocomplete="off">
                 </fieldset>
                 
                 <fieldset>

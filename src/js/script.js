@@ -34,7 +34,7 @@ function fazerLogin() {
   if (email === emailArmazenado && senha === senhaArmazenada) {
       alert("Login bem-sucedido!");
       // Redirecionar para a área do usuário
-      window.location.href = "src/html/usuario.html";
+      window.location.href = "html/usuario.html";
   } else {
       alert("Credenciais inválidas. Por favor, tente novamente.");
   }

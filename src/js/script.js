@@ -21,8 +21,6 @@ function lerDados() {
   localStorage.setItem("password", password);
   localStorage.setItem("confirmpassword", confirmpassword);
 
-  // Redirecionar para a área do usuário
-  window.location.href = "src/html/usuario.html";
 }
 
 function fazerLogin() {

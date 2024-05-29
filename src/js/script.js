@@ -30,21 +30,28 @@ function fazerLogin() {
   // Verificar se as credenciais correspondem às armazenadas localmente
   var emailArmazenado = localStorage.getItem("email");
   var senhaArmazenada = localStorage.getItem("password");
+  var senhaConf = localStorage.getItem("confirmpassword");
 
-  if (email === emailArmazenado && senha === senhaArmazenada) {
+  if (email === emailArmazenado && senha === senhaArmazenada && senha === senhaConf) {
       alert("Login bem-sucedido!");
       // Redirecionar para a área do usuário
       window.location.href = "src/html/usuario.html";
-  } else {
-      alert("Credenciais inválidas. Por favor, tente novamente.");
   }
+
+  else if (senha != senhaConf){
+    alert("As senhas digitadas não são idênticas")
+  }
+
+  else {
+    alert("Credenciais inválidas. Por favor, tente novamente.");
 }
 
+}
 function fazerLogout() {
   // Remover os dados de login armazenados localmente
   localStorage.removeItem("email");
   localStorage.removeItem("password");
-  localStorafe.removeItem("confirmpassword")
+  localStorage.removeItem("senhaConf");
   window.location.href = "/index.html";
   alert("Logout bem-sucedido!");
   // Redirecionar para a página de login ou fazer outra ação desejada

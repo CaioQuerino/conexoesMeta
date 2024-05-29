@@ -44,6 +44,7 @@ function fazerLogout() {
   // Remover os dados de login armazenados localmente
   localStorage.removeItem("email");
   localStorage.removeItem("password");
+  localStorafe.removeItem("confirmpassword")
   window.location.href = "/index.html";
   alert("Logout bem-sucedido!");
   // Redirecionar para a página de login ou fazer outra ação desejada

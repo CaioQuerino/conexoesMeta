@@ -52,7 +52,7 @@ function fazerLogout() {
   localStorage.removeItem("email");
   localStorage.removeItem("password");
   localStorage.removeItem("senhaConf");
-  window.location.href = "/index.html";
+  window.location.href = "index.html";
   alert("Logout bem-sucedido!");
   // Redirecionar para a página de login ou fazer outra ação desejada
 }

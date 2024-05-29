@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./src/img/Head-Wolf-Logo-Design-Inspiration-Graphics-39255511-1-1-580x387.jpg" type="image/x-icon">
     <link rel="stylesheet" href="src/css/style.css">
-    <script src="src/js/script.js"></script>
+    <script src="src/js/script.js" defer></script>
     <title>Conexões Meta</title>
 </head>
 <body>
@@ -15,9 +15,9 @@
                 <a href="./index.html"><img src="src/img/logo2.png" alt="Logo"></a>
             </picture>
             <fieldset>
-                <input type="email" placeholder="E-mail ou telefone" required autocomplete="off" autofocus>
-                <input type="password" placeholder="Senha" required maxlength="9" autocomplete="off">
-                <button type="submit">Entrar</button>
+                <input type="email" id="emailTelefone" placeholder="E-mail ou telefone" required autocomplete="onon" autofocus>
+                <input type="password" id="senhaLogin" placeholder="Senha" required maxlength="9" autocomplete="off">
+                <button type="submit" onclick="fazerLogin(); return false;">Entrar</button>
                 <a href="./esqueceu_senha.html">Esqueceu?</a>
             </fieldset>
         </nav>
@@ -25,42 +25,40 @@
 
     <main>
         <section>
-            <form method="post" onsubmit="return lerDados()">
-
-
+            <form onsubmit="lerDados(); return false;">
                 <fieldset>
-                    <label for="nome">Nome completo</label>
-                    <input type="text" required name="nome" id="idNome" autocomplete="off">
+                    <label for="idNome">Nome completo</label>
+                    <input type="text" required name="nome" id="idNome" autocomplete="on">
                 </fieldset>
                 
                 <fieldset>
-                    <label for="usuario">Nome de usuário</label>
-                    <input type="text" required name="usuario" id="idUsuario" autocomplete="off">
+                    <label for="idUsuario">Nome de usuário</label>
+                    <input type="text" required name="usuario" id="idUsuario" autocomplete="on">
                 </fieldset>
                 
                 <fieldset>
-                    <label for="email">E-mail</label>
-                    <input type="email" class="noInput" required name="email" id="idEmail" autocomplete="off">
+                    <label for="idEmail">E-mail</label>
+                    <input type="email" class="noInput" required name="email" id="idEmail" autocomplete="on">
                 </fieldset>
                 
                 <fieldset>
-                    <label for="celular">Celular</label>
-                    <input type="tel" required name="celular" id="idCelular" maxlength="15" autocomplete="off">
+                    <label for="idCelular">Celular</label>
+                    <input type="tel" required name="celular" id="idCelular" maxlength="15" autocomplete="on">
                 </fieldset>
                 
                 <fieldset>
-                    <label for="senha">Senha</label>
+                    <label for="idSenha">Senha</label>
                     <input type="password" class="noInput" name="senha" id="idSenha" required maxlength="9" autocomplete="off">
                 </fieldset>
                 
                 <fieldset>
-                    <label for="confirme_senha">Confirme a senha</label>
+                    <label for="idConfirmeSenha">Confirme a senha</label>
                     <input type="password" class="noInput" name="confirme_senha" id="idConfirmeSenha" required maxlength="9" autocomplete="off">
                 </fieldset>
 
                 <fieldset>
                     <a href="termos_de_uso.html" target="_blank">Termos de uso</a>
-                    <input type="checkbox" name="checkbox" id="idCheckBox" required><label for="checkbox"> Li e aceito os termos de uso</label>
+                    <input type="checkbox" name="checkbox" id="idCheckBox" required><label for="idCheckBox"> Li e aceito os termos de uso</label>
                 </fieldset>
                 
                 <fieldset class="cadastrar">
@@ -94,15 +92,11 @@
                     <td id="confirmpassword"></td>
                 </tr>
             </table>
-
         </section>
     </main>
     
-
     <footer>
         <p>&copy; 2024 Conexões Meta. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
-
-

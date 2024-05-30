@@ -30,6 +30,7 @@ body{
     background-color: var(--colorFundo);
     width: 100%;
     height: 100vh;
+    display: grid;
 }
 
 header{
@@ -223,13 +224,12 @@ nav>fieldset>input,a{
     text-align: center;
 }
 
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.video_user{
+    display: grid;
+    justify-items: center;
+    width: 100%;
 }
 
 video{
-    max-width: 900px;
-
+    max-width: 500px;
 }

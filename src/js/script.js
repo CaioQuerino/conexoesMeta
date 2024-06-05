@@ -1,10 +1,10 @@
 function lerDados() {
-  var nome = document.getElementById("idNome").value;
-  var username = document.getElementById("idUsuario").value;
-  var email = document.getElementById("idEmail").value;
-  var tel = document.getElementById("idCelular").value;
-  var password = document.getElementById("idSenha").value;
-  var confirmpassword = document.getElementById("idConfirmeSenha").value;
+  let nome = document.getElementById("idNome").value;
+  let username = document.getElementById("idUsuario").value;
+  let email = document.getElementById("idEmail").value;
+  let tel = document.getElementById("idCelular").value;
+  let password = document.getElementById("idSenha").value;
+  let confirmpassword = document.getElementById("idConfirmeSenha").value;
 
   document.getElementById("nome").innerHTML = nome;
   document.getElementById("username").innerHTML = username;
@@ -28,9 +28,9 @@ function fazerLogin() {
   var senha = document.getElementById("senhaLogin").value;
 
   // Verificar se as credenciais correspondem às armazenadas localmente
-  var emailArmazenado = localStorage.getItem("email");
-  var senhaArmazenada = localStorage.getItem("password");
-  var senhaConf = localStorage.getItem("confirmpassword");
+  let emailArmazenado = localStorage.getItem("email");
+  let senhaArmazenada = localStorage.getItem("password");
+  let senhaConf = localStorage.getItem("confirmpassword");
 
   if (email === emailArmazenado && senha === senhaArmazenada && senha === senhaConf) {
       alert("Login bem-sucedido!");

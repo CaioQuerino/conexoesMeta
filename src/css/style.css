@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Advent pro";
+    font-family: var(--FontAdventPro);
     color: var(--colorFont);
     text-decoration: none;
 }
@@ -24,6 +24,8 @@
     --colorForm: hsla(0, 2%, 21%, 0.302);
     --colorcarta: hsl(238, 75%, 6%);
     --colorFundoInputs: hsl(0, 0%, 4%);
+    --FontAdventPro: 'Advent pro';
+    --colorFooter: hsl(0, 0%, 20%);
 }
 
 body{
@@ -83,7 +85,7 @@ button{
     border-radius: 5px;
     width: 302px;
     height: 40px;
-    font: normal 800 18px "Advent pro";
+    font: normal 800 18px var(--FontAdventPro);
     text-align: center;
     margin-bottom: 5px;
 }
@@ -176,7 +178,7 @@ section{
 }
 
 footer {
-    background-color: #333;
+    background-color: var(--colorFooter);
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -200,7 +202,6 @@ footer {
 main{
     display: flex;
     justify-content: center;
-    height: 100vh;
     margin: 0 10px;
 }
 

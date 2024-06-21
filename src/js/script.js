@@ -45,7 +45,6 @@ function validar(nome, username, email, tel, password, confirmpassword){
 
     document.getElementById("erroLogin").innerHTML = '';
 
-
     document.getElementById('msgRegistro').innerHTML = 'Registrado com sucesso!';
 
 
@@ -138,3 +137,17 @@ const validateEmail = (event) => {
   let email = input.value;
   let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 };
+
+function acendeApaga(){
+  
+  let body = document.querySelector('body');
+  if(body.classList.contains('dark')){
+    body.classList.remove('dark');
+    body.classList.add('light');
+    
+  }
+  else {
+    body.classList.remove('light');
+    body.classList.add('dark');
+  }
+}

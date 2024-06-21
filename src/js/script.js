@@ -43,6 +43,9 @@ function validar(nome, username, email, tel, password, confirmpassword){
   
     localStorage.setItem("confirmpassword", confirmpassword);
 
+    document.getElementById("erroLogin").innerHTML = '';
+
+
     document.getElementById('msgRegistro').innerHTML = 'Registrado com sucesso!';
 
 

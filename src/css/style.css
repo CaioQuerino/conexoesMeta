@@ -12,6 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--FontAdventPro);
+    color: var(--colorFont);
     text-decoration: none;
 }
 
@@ -27,9 +28,6 @@
     --colorFooter: hsl(0, 0%, 20%);
 }
 
-body{
-    color: var(--colorFont);
-}
 
 .dark{
     background-color: var(--colorFundo);
@@ -45,6 +43,10 @@ body{
     height: 100vh;
     display: grid;
     color: black;
+}
+
+a{
+    color: var(--colorFont);
 }
 
 header{

@@ -28,6 +28,11 @@
     --colorFooter: hsl(0, 0%, 20%);
 }
 
+body{
+    background-color: var(--colorFundo);
+
+}
+
 
 .dark{
     background-color: var(--colorFundo);

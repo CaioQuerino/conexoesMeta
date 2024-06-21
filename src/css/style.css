@@ -27,6 +27,9 @@
     --colorFooter: hsl(0, 0%, 20%);
 }
 
+body{
+    color: var(--colorFont);
+}
 
 .dark{
     background-color: var(--colorFundo);

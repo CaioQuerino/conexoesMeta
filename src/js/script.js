@@ -1,3 +1,70 @@
+function validar(nome, username, email, tel, password, confirmpassword){
+
+  if(confirmpassword !== password){
+    document.getElementById('erroPassword').innerHTML = 'As senhas não são iguais';
+  }
+  else{
+    document.getElementById('erroPassword').innerHTML = '';
+
+  }
+  if(tel == ""){
+    document.getElementById('erroTel').innerHTML = 'Campo obrigatório';
+  }
+  else{
+    document.getElementById('erroTel').innerHTML = '';
+  }
+  if(email == ""){
+    document.getElementById('erroEmail').innerHTML = 'Campo obrigatório';
+  }
+  else{
+    document.getElementById('erroEmail').innerHTML = '';
+  }
+  if(username == ""){
+    document.getElementById('erroUser').innerHTML = 'Campo obrigatório';
+  }
+  else{
+    document.getElementById('erroUser').innerHTML = '';
+  }
+  if(nome == ""){
+    document.getElementById('erroNome').innerHTML = 'Campo obrigatório';
+  }
+  else{
+    document.getElementById('erroNome').innerHTML = '';
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    document.getElementById('erroEmail').innerHTML = 'Email invalido';
+  }
+
+  if(nome !== "" && username !== "" && email !== "" && tel !== "" && password  === confirmpassword){
+    localStorage.setItem("email", email);
+
+    localStorage.setItem("password", password);
+  
+    localStorage.setItem("confirmpassword", confirmpassword);
+
+    document.getElementById('msgRegistro').innerHTML = 'Registrado com sucesso!';
+
+
+    document.getElementById('idNome').value = '';
+
+    document.getElementById('idUsuario').value = '';
+
+    document.getElementById('idEmail').value = '';
+
+    document.getElementById('idCelular').value = '';
+
+    document.getElementById('erroNome').value = '';
+
+    document.getElementById("idSenha").value = '';
+
+    document.getElementById("idConfirmeSenha").value = '';
+
+  
+  }
+}
+
+
 function lerDados() {
   let nome = document.getElementById("idNome").value;
   let username = document.getElementById("idUsuario").value;
@@ -6,44 +73,28 @@ function lerDados() {
   let password = document.getElementById("idSenha").value;
   let confirmpassword = document.getElementById("idConfirmeSenha").value;
 
-  document.getElementById("nome").innerHTML = nome;
-  document.getElementById("username").innerHTML = username;
-  document.getElementById("email").innerHTML = email;
-  document.getElementById("tel").innerHTML = tel;
-  document.getElementById("password").innerHTML = password;
-  document.getElementById("confirmpassword").innerHTML = confirmpassword;
-
-  // Armazenar os dados localmente
-  localStorage.setItem("nome", nome);
-  localStorage.setItem("username", username);
-  localStorage.setItem("email", email);
-  localStorage.setItem("tel", tel);
-  localStorage.setItem("password", password);
-  localStorage.setItem("confirmpassword", confirmpassword);
+  validar(nome, username, email, tel, password, confirmpassword)
 
 }
 
 function fazerLogin() {
- email = document.getElementById("emailTelefone").value;
- senha = document.getElementById("senhaLogin").value;
+    email = document.getElementById("emailTelefone").value;
+    senha = document.getElementById("senhaLogin").value;
 
-  // Verificar se as credenciais correspondem às armazenadas localmente
-  let emailArmazenado = localStorage.getItem("email");
-  let senhaArmazenada = localStorage.getItem("password");
-  let senhaConf = localStorage.getItem("confirmpassword");
+      // Verificar se as credenciais correspondem às armazenadas localmente
+      let emailArmazenado = localStorage.getItem("email");
+      let senhaArmazenada = localStorage.getItem("password");
+      let senhaConf = localStorage.getItem("confirmpassword");
 
-  if (email === emailArmazenado && senha === senhaArmazenada && senha === senhaConf) {
-      alert("Login bem-sucedido!");
-      // Redirecionar para a área do usuário
-      window.location.href = "src/html/usuario.html";
-  }
+      if (email === emailArmazenado && senha === senhaArmazenada && senha === senhaConf) {
+          // Redirecionar para a área do usuário
+          window.location.href = "src/html/usuario.html";
+      }
+      else {
+        document.getElementById('msgRegistro').innerHTML = '';
 
-  else if (senha != senhaConf){
-    alert("As senhas digitadas não são idênticas")
-  }
+        document.getElementById("erroLogin").innerHTML = 'A senha ou e-mail está errada!';
 
-  else {
-    alert("Credenciais inválidas. Por favor, tente novamente.");
 }
 
 }
@@ -51,9 +102,8 @@ function fazerLogout() {
   // Remover os dados de login armazenados localmente
   localStorage.removeItem("email");
   localStorage.removeItem("password");
-  localStorage.removeItem("senhaConf");
+  localStorage.removeItem("confirmpassword");
   window.location.href = "../../index.html";
-  alert("Logout bem-sucedido!");
   // Redirecionar para a página de login ou fazer outra ação desejada
 }
 
@@ -78,4 +128,10 @@ const phoneMask = (value) => {
   value = value.replace(/(\d{2})(\d)/, "($1) $2");
   value = value.replace(/(\d)(\d{4})$/, "$1-$2");
   return value;
+};
+
+const validateEmail = (event) => {
+  let input = event.target;
+  let email = input.value;
+  let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 };

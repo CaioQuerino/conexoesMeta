@@ -25,25 +25,35 @@
 
     <main>
         <section>
-            <form onsubmit="lerDados(); return false;">
+
+            <h2 id="msgRegistro"></h2>
+            <h2 id="erroLogin" style="color: darkred;"></h2>
+            <form action="#" method="post" id="emailForm">
                 <fieldset>
                     <label for="idNome">Nome completo</label>
-                    <input type="text" required name="nome" id="idNome" autocomplete="off">
+                    <input type="text" minlength="15" maxlength="60" required name="nome" id="idNome" autocomplete="off">
+                    <p id="erroNome" style="color: darkred;"></p>
+
                 </fieldset>
                 
                 <fieldset>
                     <label for="idUsuario">Nome de usuário</label>
                     <input type="text" required name="usuario" id="idUsuario" autocomplete="off">
+                    <p id="erroUser" style="color: darkred;"></p>
+
                 </fieldset>
                 
                 <fieldset>
                     <label for="idEmail">E-mail</label>
                     <input type="email" class="noInput" required name="email" id="idEmail" autocomplete="off">
+                    <p id="erroEmail" style="color: darkred;"></p>
                 </fieldset>
                 
                 <fieldset>
                     <label for="idCelular">Celular</label>
                     <input type="tel" required name="celular" id="idCelular" maxlength="15" autocomplete="off">
+                    <p id="erroTel" style="color: darkred;"></p>
+
                 </fieldset>
                 
                 <fieldset>
@@ -54,44 +64,21 @@
                 <fieldset>
                     <label for="idConfirmeSenha">Confirme a senha</label>
                     <input type="password" class="noInput" name="confirme_senha" id="idConfirmeSenha" required maxlength="9" autocomplete="off">
+                    <p id="erroPassword" style="color: darkred;"></p>
                 </fieldset>
 
                 <fieldset>
                     <a href="termos_de_uso.html" target="_blank">Termos de uso</a>
                     <input type="checkbox" name="checkbox" id="idCheckBox" required><label for="idCheckBox"> Li e aceito os termos de uso</label>
+
                 </fieldset>
                 
                 <fieldset class="cadastrar">
-                    <button type="submit">Cadastrar</button>
+                    <button type="button" onclick="lerDados()">Cadastrar</button>
                 </fieldset>
             </form>
 
-            <table border="1px">
-                <tr>
-                    <td>Nome Completo</td>
-                    <td id="nome"></td>
-                </tr>
-                <tr>
-                    <td>Nome de usuário</td>
-                    <td id="username"></td>
-                </tr>
-                <tr>
-                    <td>E-mail</td>
-                    <td id="email"></td>
-                </tr>
-                <tr>
-                    <td>Celular</td>
-                    <td id="tel"></td>
-                </tr>
-                <tr>
-                    <td>Senha</td>
-                    <td id="password"></td>
-                </tr>
-                <tr>
-                    <td>Confirmação de senha</td>
-                    <td id="confirmpassword"></td>
-                </tr>
-            </table>
+
         </section>
     </main>
     
